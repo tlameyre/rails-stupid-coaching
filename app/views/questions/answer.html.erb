@@ -1,0 +1,17 @@
+<div class="card question">
+  <%= @question %>
+  <p> -You</p>
+</div>
+
+<div class="card answer">
+  <% if @question == 'I am going to work'%>
+  <p>Great!</p>
+  <% elsif @question[-1] == '?' %>
+  <p>Silly question, get dressed and go to work!</p>
+  <% else %>
+  <p>I don't care, get dressed and go to work!</p>
+  <% end %>
+  <p> -Your coach</p>
+</div>
+
+<%= link_to 'Ask a new question', '/ask' %>
